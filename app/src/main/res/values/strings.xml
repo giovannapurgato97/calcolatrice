@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Calcolatrice</string>
+    <string name="op1">primo operando</string>
+    <string name="op2">secondo operando</string>
+    <string name="piu">+</string>
+    <string name="meno">-</string>
+    <string name="per">*</string>
+    <string name="diviso">/</string>
+    <string name="help">Inserire due numeri e premere un pulsante</string>
 </resources>
