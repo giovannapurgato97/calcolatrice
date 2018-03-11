@@ -17,6 +17,10 @@ public class MainActivity extends AppCompatActivity {
     private Button vRapporto;
     private TextView vRisultato;
 
+    // Operandi
+    private double op1;
+    private double op2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,5 +36,56 @@ public class MainActivity extends AppCompatActivity {
         vRisultato = findViewById(R.id.textRisultato);
     }
 
+    /**
+     * Legge i due operandi dagli EditText convertendoli in double
+     */
+    private void leggiOperandi() {
+        try {
+            op1 = Double.parseDouble(vOperando1.getText().toString());
+        } catch (Exception e) {
+            op1 = 0.0;
+        }
+
+        try {
+            op2 = Double.parseDouble(vOperando2.getText().toString());
+        } catch (Exception e) {
+            op2 = 0.0;
+        }
+    }
+
+    /**
+     * Mostra il risultato nella TextView
+     * @param risultato valore da mostrare
+     */
+    private void mostraRisultato(double risultato) {
+        vRisultato.setText(String.format(getString(R.string.risultato), risultato));
+    }
+
+    /**
+     * Mostra il messaggio d'errore per la divisione per zero
+     */
+    private void mostraDivByZero() {
+        vRisultato.setText(R.string.divbyzero);
+    }
+
+    private void eseguiSomma() {
+        mostraRisultato(op1 + op2);
+    }
+
+    private void eseguiDifferenza() {
+        mostraRisultato(op1 - op2);
+    }
+
+    private void eseguiProdotto() {
+        mostraRisultato(op1 * op2);
+    }
+
+    private void eseguiRapporto() {
+        if (op2 == 0.0) {
+            mostraDivByZero();
+        } else {
+            mostraRisultato(op1 / op2);
+        }
+    }
 
 }

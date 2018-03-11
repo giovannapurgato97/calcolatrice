@@ -6,5 +6,7 @@
     <string name="meno">-</string>
     <string name="per">*</string>
     <string name="diviso">/</string>
+    <string name="risultato">Il risultato è: %4.3f</string>
     <string name="help">Inserire due numeri e premere un pulsante</string>
+    <string name="divbyzero">Impossibile dividere per zero</string>
 </resources>
