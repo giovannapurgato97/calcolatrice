@@ -29,7 +29,8 @@ public class MainActivity extends AppCompatActivity {
         vDifferenza = findViewById(R.id.btnDifferenza);
         vProdotto = findViewById(R.id.btnProdotto);
         vRapporto = findViewById(R.id.btnRapporto);
+        vRisultato = findViewById(R.id.textRisultato);
     }
 
-    
+
 }
