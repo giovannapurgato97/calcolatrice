@@ -64,7 +64,7 @@
         android:layout_height="wrap_content"
         android:text="@string/meno"
         app:layout_constraintBottom_toBottomOf="@+id/btnSomma"
-        app:layout_constraintEnd_toStartOf="@+id/btnRapporto"
+        app:layout_constraintEnd_toStartOf="@+id/btnProdotto"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnSomma" />
 
@@ -73,18 +73,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/per"
-        app:layout_constraintBottom_toBottomOf="@+id/btnRapporto"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/btnDifferenza"
+        app:layout_constraintEnd_toStartOf="@+id/btnRapporto"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btnRapporto" />
+        app:layout_constraintStart_toEndOf="@+id/btnDifferenza" />
 
     <Button
         android:id="@+id/btnRapporto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/diviso"
-        app:layout_constraintBottom_toBottomOf="@+id/btnDifferenza"
-        app:layout_constraintEnd_toStartOf="@+id/btnProdotto"
+        app:layout_constraintBottom_toBottomOf="@+id/btnProdotto"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btnDifferenza" />
+        app:layout_constraintStart_toEndOf="@+id/btnProdotto" />
+
 </android.support.constraint.ConstraintLayout>

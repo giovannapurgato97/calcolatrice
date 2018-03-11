@@ -45,7 +45,7 @@
         android:textAppearance="@android:style/TextAppearance.Material.Medium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRapporto" />
+        app:layout_constraintTop_toBottomOf="@+id/btnProdotto" />
 
     <Button
         android:id="@+id/btnSomma"
@@ -72,20 +72,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/per"
-        app:layout_constraintBottom_toBottomOf="@+id/btnRapporto"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/editOperando2"
+        app:layout_constraintEnd_toStartOf="@+id/btnRapporto"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btnRapporto" />
+        app:layout_constraintStart_toEndOf="@+id/guideline" />
 
     <Button
         android:id="@+id/btnRapporto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/diviso"
-        app:layout_constraintBottom_toBottomOf="@+id/editOperando2"
-        app:layout_constraintEnd_toStartOf="@+id/btnProdotto"
+        app:layout_constraintBottom_toBottomOf="@+id/btnProdotto"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/guideline" />
+        app:layout_constraintStart_toEndOf="@+id/btnProdotto" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"

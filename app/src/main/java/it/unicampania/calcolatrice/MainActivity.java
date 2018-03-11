@@ -2,6 +2,7 @@ package it.unicampania.calcolatrice;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -34,6 +35,40 @@ public class MainActivity extends AppCompatActivity {
         vProdotto = findViewById(R.id.btnProdotto);
         vRapporto = findViewById(R.id.btnRapporto);
         vRisultato = findViewById(R.id.textRisultato);
+
+        // Impostazione azioni pulsanti
+        vSomma.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                leggiOperandi();
+                mostraRisultato(op1 + op2);
+            }
+        });
+        vDifferenza.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                leggiOperandi();
+                mostraRisultato(op1 - op2);
+            }
+        });
+        vProdotto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                leggiOperandi();
+                mostraRisultato(op1 * op2);
+            }
+        });
+        vRapporto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                leggiOperandi();
+                if (op2 == 0.0) {
+                    mostraDivByZero();
+                } else {
+                    mostraRisultato(op1 / op2);
+                }
+            }
+        });
     }
 
     /**
@@ -66,26 +101,6 @@ public class MainActivity extends AppCompatActivity {
      */
     private void mostraDivByZero() {
         vRisultato.setText(R.string.divbyzero);
-    }
-
-    private void eseguiSomma() {
-        mostraRisultato(op1 + op2);
-    }
-
-    private void eseguiDifferenza() {
-        mostraRisultato(op1 - op2);
-    }
-
-    private void eseguiProdotto() {
-        mostraRisultato(op1 * op2);
-    }
-
-    private void eseguiRapporto() {
-        if (op2 == 0.0) {
-            mostraDivByZero();
-        } else {
-            mostraRisultato(op1 / op2);
-        }
     }
 
 }
