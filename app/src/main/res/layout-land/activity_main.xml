@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="it.unicampania.calcolatrice.MainActivity">
+
+    <EditText
+        android:id="@+id/editOperando1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="@string/op1"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editOperando2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="@string/op2"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editOperando1" />
+
+    <TextView
+        android:id="@+id/textRisultato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/help"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRapporto" />
+
+    <Button
+        android:id="@+id/btnSomma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/piu"
+        app:layout_constraintBottom_toBottomOf="@+id/editOperando1"
+        app:layout_constraintEnd_toStartOf="@+id/btnDifferenza"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/guideline" />
+
+    <Button
+        android:id="@+id/btnDifferenza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/meno"
+        app:layout_constraintBottom_toBottomOf="@+id/btnSomma"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnSomma" />
+
+    <Button
+        android:id="@+id/btnProdotto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/per"
+        app:layout_constraintBottom_toBottomOf="@+id/btnRapporto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnRapporto" />
+
+    <Button
+        android:id="@+id/btnRapporto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/diviso"
+        app:layout_constraintBottom_toBottomOf="@+id/editOperando2"
+        app:layout_constraintEnd_toStartOf="@+id/btnProdotto"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/guideline" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+</android.support.constraint.ConstraintLayout>
